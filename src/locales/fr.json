@@ -1,0 +1,73 @@
+{
+  "name": "Soltanat El Djamal",
+  "tagline": "Tourisme",
+  "nav": {
+    "hero": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "intro": "Chaque pas que nous faisons, chaque instant que nous valorisons.",
+  "aboutUs": "Chez Soltanat El Djamal, nous nous engageons à rendre vos voyages fluides, personnalisés et inoubliables. Spécialisés dans le Hajj, la Omra et les destinations internationales, nous proposons des services complets, des réservations d'hôtel et de vol à la planification d'itinéraire et à l'assistance sur place. En mettant l'accent sur le confort, la commodité et la tranquillité d'esprit, nous nous occupons de tous les aspects du voyage, y compris les billets d'avion, l'hébergement de qualité et l'assistance personnalisée. Que vous vous lanciez dans un voyage spirituel ou que vous exploriez de nouveaux horizons, notre équipe est là pour rendre chaque étape de votre voyage exceptionnelle.",
+  "organized trips": "Voyages Organisés",
+  "omra" : "Omra",
+  "hadj": "Hadj",
+  "irline tickets" : "Billets d'avion",
+  "hotel reservations": "Résèrvations d'hotel",
+  "callToAction": "Contactez-nous",
+  "hireMe": "Engagez-moi",
+  "hireMeTitle": "Travaillons ensemble",
+  "hireMeDescription": "Je suis actuellement disponible pour du travail freelance. Si vous avez un projet que vous souhaitez démarrer, pensez que vous avez besoin de mon aide pour quelque chose ou souhaitez simplement dire bonjour, alors contactez-moi.",
+  "servicesTitle": "Nos Services",
+  "projectDesc": "Une brève description du projet {number} et des technologies utilisées.",
+  "viewService": "Voir le service",
+  "backTowebsite": "Retour au page d'accueil",
+  "services": {
+    "omra": {
+      "name": "Omra",
+      "description": ""
+    },
+    "hadj": {
+      "name": "Hadj",
+      "description": ""
+    },
+    "organized-trips": {
+      "name": "Voyages Organisés",
+      "description": ""
+    },
+    "airline-tickets": {
+      "name": "Billets d'avion",
+      "description": ""
+    },
+    "hotel-reservations": {
+      "name": "Résèrvations d'hotel",
+      "description": ""
+    }
+  },
+  "contactTitle": "Contactez-nous",
+  "contactText": "N'hésitez pas à nous contacter si vous avez des questions ou si vous voulez simplement discuter !",
+  "form": {
+    "name": "Votre Nom",
+    "email": "Votre Email",
+    "message": "Votre Message",
+    "sendMessage": "Envoyer le message",
+    "success": "Votre message a été envoyé avec succès. Nous vous répondrons sous peu !",
+    "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard."
+  },
+  "footer": "Tous droits réservés.",
+  "toggleTheme": "Changer de thème",
+  "metadata": {
+    "title": "Soltanat El Djamal | Votre Agence de Voyage de Confiance pour des Offres de Hajj et Umrah",
+    "description": "Chez Soltanat El Djamal, nous nous engageons à rendre vos voyages fluides, personnalisés et inoubliables. Spécialisés dans le Hajj, la Omra et les destinations internationales, nous proposons des services complets, des réservations d'hôtel et de vol à la planification d'itinéraire et à l'assistance sur place. En mettant l'accent sur le confort, la commodité et la tranquillité d'esprit, nous nous occupons de tous les aspects du voyage, y compris les billets d'avion, l'hébergement de qualité et l'assistance personnalisée. Que vous vous lanciez dans un voyage spirituel ou que vous exploriez de nouveaux horizons, notre équipe est là pour rendre chaque étape de votre voyage exceptionnelle.",
+    "og-description": "Découvrez le monde avec Soltanat El Djamal. Nous nous spécialisons dans les offres de Hajj et Umrah, les vols abordables et les réservations d'hôtels. Découvrez votre prochaine aventure dès aujourd'hui !",
+    "preview-image": "/preview/fr.png"
+  },
+  "ariaLabel": {
+    "mail": "Envoyez-moi un e-mail",
+    "facebook": "Voir notre profil Facebook",
+    "instagram": "Voir notre profile Instagram",
+    "whatsapp": "Connectez-nous sur Whatsapp",
+    "phone": "Connectez-nous avec nos numéro de téléphone"
+  }
+}
