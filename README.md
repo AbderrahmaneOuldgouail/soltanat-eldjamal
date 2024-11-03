@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Soltanat El Djamal Travel Agency Website
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+A responsive, one-page website built with Next.js and TypeScript for Soltanat El Djamal, a travel agency specializing in Hajj, Umrah, and leisure travel services.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Project Overview](#Overview)
+- [Features](#features)
+- [Technologies](#technologies)
+- [License](#license)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The Soltanat El Djamal Travel Agency website provides users with a simple, informative one-page layout showcasing the agency's offerings. Users can explore services, such as hotel booking, flight booking, and travel packages, with support for multiple languages, including English, French, and Arabic.
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- **Responsive Design:** Mobile-first design to ensure a seamless experience on any device.
+- **One-Page Layout:** All essential information is accessible from a single page, including services, about section, contact information, and social media links.
+- **SEO Optimization:** Meta tags, titles, and descriptions are included to enhance visibility in search engines.
+- **Multi-language Support:** Available in English, French, and Arabic, with dynamic right-to-left layout adjustments for Arabic.
+- **Real-Time Analytics:** Vercel Analytics integration for tracking user behavior and performance.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/docs) 
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [Tailwind CSS](https://tailwindcss.com/docs)  
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- This project is licensed under the MIT License. You are free to use, modify, and distribute the code as per the terms of the license.
