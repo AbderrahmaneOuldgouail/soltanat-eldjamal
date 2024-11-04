@@ -1,9 +1,4 @@
-import {
-  FacebookIcon,
-  Instagram,
-  Mail,
-  Phone,
-} from "lucide-react";
+import { FacebookIcon, Instagram, Mail, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ContactMeForm } from "./contact-me-form";
 
@@ -22,12 +17,16 @@ export default function Contact() {
             sendMessage: t("form.sendMessage"),
             success: t("form.success"),
             error: t("form.error"),
+            required: t("form.required"),
+            nameError: t("form.nameError"),
+            messageError: t("form.messageError"),
+            emailError: t("form.emailError"),
           }}
           type="GET IN TOUCH"
         />
         <div className="space-y-4">
           <p className="text-lg">{t("contactText")}</p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
             <a
               href={process.env.FACEBOOK_URL}
               target="_blank"
@@ -77,27 +76,27 @@ export default function Contact() {
               </span>
               {process.env.WHATSAPP_NUMBER}
             </a>
-            <span className=" w-2/3 flex gap-6">
-              <span className="bg-primary text-primary-foreground p-2 rounded-lg transition-transform duration-300 hover:scale-110">
+            <span className=" w-2/3 flex flex-col lg:flex-row items-center justify-center gap-6">
+              <span className="bg-primary h-10 w-10 text-primary-foreground p-2 rounded-lg transition-transform duration-300 hover:scale-110">
                 <Phone className="w-6 h-6" />
               </span>
               <a
                 href={`phone:${process.env.PHONE_1}`}
-                className="text-foreground hover:text-primary flex gap-2 items-center"
+                className="text-foreground hover:text-primary flex gap-2 items-center justify-center"
                 aria-label={t("ariaLabel.phone")}
               >
                 {process.env.PHONE_1}
               </a>
               <a
                 href={`phone:${process.env.PHONE_2}`}
-                className="text-foreground hover:text-primary flex gap-2 items-center"
+                className="text-foreground hover:text-primary flex gap-2 items-center justify-center"
                 aria-label={t("ariaLabel.phone")}
               >
                 {process.env.PHONE_2}
               </a>
               <a
                 href={`phone:${process.env.FIX}`}
-                className="text-foreground hover:text-primary flex gap-2 items-center"
+                className="text-foreground hover:text-primary flex gap-2 items-center justify-center"
                 aria-label={t("ariaLabel.phone")}
               >
                 {process.env.FIX}

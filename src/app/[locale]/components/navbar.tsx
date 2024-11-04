@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Globe, Menu } from "lucide-react";
 import { LangSwitcher } from "@/components/common/LangSwitcher";
+import Logo from "@/assets/logo/logo.png";
 
 export default function Navbar() {
   const t = useTranslations();
@@ -12,7 +13,14 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-10 backdrop-blur-sm bg-background/90 border-b">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">{t("name")}</h1>
+        <span className="flex gap-2 justify-center items-center">
+          <img
+            src={Logo.src}
+            alt="Logo"
+            className="w-10 h-10 object-cover transition-transform duration-300 hover:scale-110"
+          />
+          <h1 className="text-2xl font-bold">{t("name")}</h1>
+        </span>
         <nav className="hidden md:flex items-center space-x-4">
           <ul className="flex gap-4 rtl:me-4">
             <li>

@@ -46,23 +46,6 @@
       "description": ""
     }
   },
-  "experienceTitle": "Experience",
-  "languages": {
-    "title": "Languages",
-    "desc": "Programming languages I'm proficient in"
-  },
-  "frontend": {
-    "title": "Frontend Technologies",
-    "desc": "Tools and frameworks I use for frontend development"
-  },
-  "backend": {
-    "title": "Backend Technologies",
-    "desc": "Tools and frameworks I use for backend development"
-  },
-  "other": {
-    "title": "Other Technologies",
-    "desc": "Additional tools and technologies I'm experienced with"
-  },
   "contactTitle": "Get in Touch",
   "contactText": "Don’t hesitate to contact us if you have any questions or just want to chat!",
   "form": {
@@ -71,7 +54,11 @@
     "message": "Your Message",
     "sendMessage": "Send Message",
     "success": "Your message has been successfully sent. We will get back to you shortly!",
-    "error": "There was an error sending your message. Please try again later."
+    "error": "There was an error sending your message. Please try again later.",
+    "required": "This field is required",
+    "nameError": "Name contains invalid characters.",
+    "emailError": "Please enter a valid email address.",
+    "messageError": "Message contains invalid characters."
   },
   "footer": "All rights reserved.",
   "toggleTheme": "Toggle theme",
@@ -82,7 +69,7 @@
     "preview-image": "/preview/en.png"
   },
   "ariaLabel": {
-    "mail": "Send me an email",
+    "mail": "Send us an email",
     "facebook": "View our Facebook profile",
     "instagram": "View our Instagram profile",
     "whatsapp": "Connect with us on WhatsApp",

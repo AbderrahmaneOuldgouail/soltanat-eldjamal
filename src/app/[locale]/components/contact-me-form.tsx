@@ -8,6 +8,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useLocale } from "next-intl";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 export function ContactMeForm({
   trans,
@@ -21,6 +26,11 @@ export function ContactMeForm({
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [isLoading, setIsLoading] = useState(false);
   const locale = useLocale();
 
@@ -28,17 +38,56 @@ export function ContactMeForm({
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
+  const validateForm = () => {
+    const newErrors = {
+      name: "",
+      email: "",
+      message: "",
+    };
+    const nameRegex = /^[a-zA-Z0-9]+$/;
+    if (!formData.name.trim()) {
+      newErrors.name = trans.required;
+    } else if (formData.name.length > 30 || !nameRegex.test(formData.name)) {
+      newErrors.name = trans.nameError;
+    }
+
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    if (!formData.email.trim()) {
+      newErrors.email = trans.required;
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = trans.emailError;
+    }
+
+    const messageRegex = /^[a-zA-Z0-9\s.,?!@#%&*()-]+$/;
+    if (!formData.message.trim()) {
+      newErrors.message = trans.required;
+    } else if (!messageRegex.test(formData.message)) {
+      newErrors.message = trans.messageError;
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
     setIsLoading(true);
 
     emailjs
       .send(
-        "service_8gsjp0q",
-        "template_5ctjbao",
+        serviceId,
+        templateId,
         {
           locale,
           type: type,
@@ -47,7 +96,7 @@ export function ContactMeForm({
           message: formData.message,
         },
         {
-          publicKey: "lIYPpKH9IVwtklCcn",
+          publicKey: publicKey,
         }
       )
       .then(
@@ -57,12 +106,6 @@ export function ContactMeForm({
           toast.success(trans.success);
         },
         (reason) => {
-          if (
-            process.env.NODE_ENV === "development" ||
-            process.env.NODE_ENV === "test"
-          ) {
-            console.log("Failed", reason);
-          }
           toast.error(trans.error);
           setIsLoading(false);
         }
@@ -71,23 +114,62 @@ export function ContactMeForm({
 
   return (
     <form onSubmit={submitHandler} className="space-y-4">
-      <Input
-        type="text"
-        name="name"
-        onChange={handleChange}
-        placeholder={trans.name}
-      />
-      <Input
-        type="email"
-        name="email"
-        onChange={handleChange}
-        placeholder={trans.email}
-      />
-      <Textarea
-        name="message"
-        onChange={handleChange}
-        placeholder={trans.message}
-      />
+      <Popover open={errors.name != "" ? true : false}>
+        <PopoverTrigger className="w-full">
+          <Input
+            type="text"
+            name="name"
+            onChange={handleChange}
+            placeholder={trans.name}
+          />
+        </PopoverTrigger>
+        <PopoverContent
+          side="top"
+          align="end"
+          className="bg-destructive text-destructive-foreground text-sm p-2 opacity-80"
+        >
+          <div className="text-sm"></div>
+          {errors.name}
+        </PopoverContent>
+      </Popover>
+
+      <Popover open={errors.email != "" ? true : false}>
+        <PopoverTrigger className="w-full">
+          <Input
+            type="text"
+            name="email"
+            onChange={handleChange}
+            placeholder={trans.email}
+          />
+        </PopoverTrigger>
+        <PopoverContent
+          side="top"
+          align="end"
+          className=" bg-destructive text-destructive-foreground text-sm p-2 opacity-80"
+        >
+          <div className="text-sm"></div>
+          {errors.email}
+        </PopoverContent>
+      </Popover>
+
+      <Popover open={errors.message != "" ? true : false}>
+        <PopoverTrigger className="w-full">
+          <Textarea
+            name="message"
+            onChange={handleChange}
+            placeholder={trans.message}
+          />
+        </PopoverTrigger>
+        <PopoverContent
+          side="top"
+          align="end"
+          className="bg-destructive text-destructive-foreground text-sm p-2 opacity-80"
+        >
+          <div className="text-sm"></div>
+          {errors.message}
+        </PopoverContent>
+      </Popover>
+
       <Button type="submit" disabled={isLoading}>
         {trans.sendMessage}
       </Button>

@@ -17,31 +17,31 @@ export default function Hero() {
           <p className="text-lg mb-4">{t("intro")}</p>
           <div className="flex flex-wrap gap-2 mb-4">
             <Badge
-              className="transition-transform duration-300 hover:scale-95"
+              className="transition-transform duration-300 hover:scale-95 cursor-default"
               variant={"secondary"}
             >
               {t("organized trips")}
             </Badge>
             <Badge
-              className="transition-transform duration-300 hover:scale-95"
+              className="transition-transform duration-300 hover:scale-95 cursor-default"
               variant={"secondary"}
             >
               {t("omra")}
             </Badge>
             <Badge
-              className="transition-transform duration-300 hover:scale-95"
+              className="transition-transform duration-300 hover:scale-95 cursor-default"
               variant={"secondary"}
             >
               {t("hadj")}
             </Badge>
             <Badge
-              className="transition-transform duration-300 hover:scale-95"
+              className="transition-transform duration-300 hover:scale-95 cursor-default"
               variant={"secondary"}
             >
               {t("airline tickets")}
             </Badge>
             <Badge
-              className="transition-transform duration-300 hover:scale-95"
+              className="transition-transform duration-300 hover:scale-95 cursor-default"
               variant={"secondary"}
             >
               {t("hotel reservations")}

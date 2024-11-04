@@ -13,7 +13,7 @@
   "organized trips": "Voyages Organisés",
   "omra" : "Omra",
   "hadj": "Hadj",
-  "irline tickets" : "Billets d'avion",
+  "airline tickets" : "Billets d'avion",
   "hotel reservations": "Résèrvations d'hotel",
   "callToAction": "Contactez-nous",
   "hireMe": "Engagez-moi",
@@ -53,7 +53,11 @@
     "message": "Votre Message",
     "sendMessage": "Envoyer le message",
     "success": "Votre message a été envoyé avec succès. Nous vous répondrons sous peu !",
-    "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard."
+    "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.",
+    "required": "Ce champ est requis",
+    "nameError": "Le nom contient des caractères non valides.",
+    "emailError": "S'il vous plaît, mettez une adresse email valide.",
+    "messageError": "Le message contient des caractères non valides."
   },
   "footer": "Tous droits réservés.",
   "toggleTheme": "Changer de thème",
@@ -64,7 +68,7 @@
     "preview-image": "/preview/fr.png"
   },
   "ariaLabel": {
-    "mail": "Envoyez-moi un e-mail",
+    "mail": "Envoyez-nous un e-mail",
     "facebook": "Voir notre profil Facebook",
     "instagram": "Voir notre profile Instagram",
     "whatsapp": "Connectez-nous sur Whatsapp",
