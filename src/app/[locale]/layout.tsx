@@ -32,6 +32,12 @@ export async function generateMetadata(): Promise<Metadata> {
       url: "https://soltanat-eldjamal.vercel.app",
       images: t("preview-image"),
     },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: t("preview-image"),
+    },
     alternates: {
       canonical: "https://soltanat-eldjamal.vercel.app",
       languages: {
