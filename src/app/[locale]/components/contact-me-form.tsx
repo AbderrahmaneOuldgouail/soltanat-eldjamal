@@ -3,7 +3,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -67,9 +66,10 @@ export function ContactMeForm({
     } else if (!messageRegex.test(formData.message)) {
       newErrors.message = trans.messageError;
     }
-
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    return (
+      newErrors.name == "" && newErrors.email == "" && newErrors.message == ""
+    );
   };
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
@@ -115,36 +115,36 @@ export function ContactMeForm({
   return (
     <form onSubmit={submitHandler} className="space-y-4">
       <Popover open={errors.name != "" ? true : false}>
-        <PopoverTrigger className="w-full">
-          <Input
-            type="text"
-            name="name"
-            onChange={handleChange}
-            placeholder={trans.name}
-          />
-        </PopoverTrigger>
+        <PopoverTrigger className="w-full"></PopoverTrigger>
         <PopoverContent
           side="top"
           align="end"
+          sideOffset={-30}
           className="bg-destructive text-destructive-foreground text-sm p-2 opacity-80"
         >
           <div className="text-sm"></div>
           {errors.name}
         </PopoverContent>
+        <Input
+          type="text"
+          name="name"
+          onChange={handleChange}
+          placeholder={trans.name}
+        />
       </Popover>
 
       <Popover open={errors.email != "" ? true : false}>
-        <PopoverTrigger className="w-full">
-          <Input
-            type="text"
-            name="email"
-            onChange={handleChange}
-            placeholder={trans.email}
-          />
-        </PopoverTrigger>
+        <PopoverTrigger className="w-full"></PopoverTrigger>
+        <Input
+          type="text"
+          name="email"
+          onChange={handleChange}
+          placeholder={trans.email}
+        />
         <PopoverContent
           side="top"
           align="end"
+          sideOffset={-30}
           className=" bg-destructive text-destructive-foreground text-sm p-2 opacity-80"
         >
           <div className="text-sm"></div>
@@ -153,16 +153,16 @@ export function ContactMeForm({
       </Popover>
 
       <Popover open={errors.message != "" ? true : false}>
-        <PopoverTrigger className="w-full">
-          <Textarea
-            name="message"
-            onChange={handleChange}
-            placeholder={trans.message}
-          />
-        </PopoverTrigger>
+        <PopoverTrigger className="w-full"></PopoverTrigger>
+        <Textarea
+          name="message"
+          onChange={handleChange}
+          placeholder={trans.message}
+        />
         <PopoverContent
           side="top"
           align="end"
+          sideOffset={-30}
           className="bg-destructive text-destructive-foreground text-sm p-2 opacity-80"
         >
           <div className="text-sm"></div>
